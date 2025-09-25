@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI | My life My life</title>
+    <style>
+      body {
+        background-image: url(Pic/food.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-size: 100%;
+        background-color: #ccf0e6;
+        line-height: 1.6;
+        color: #333;
+        font-family: Arial, sans-serif;
+        margin: 10px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        margin-bottom: 20px;
+      }
+      .page-header {
+        background-image: url(Pic/upsacampus.png);
+        background-size: cover;
+        height: 250px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: white;
+        display: flex;
+        background-position: center center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+        margin-bottom: 20px; /* Add some space below the header */
+        margin-left: 0;
+        margin-right: 0;
+      }
+      nav a {
+        font-weight: bold;
+        font-size: 1em;
+        color: #0745a9;
+        text-decoration: none;
+        justify-content: center;
+       
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      article {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+      }
+      section {
+        background-color: #66e4fae7;
+        width: 100%;
+        height: 80%;
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
+      aside {
+       background-color: #ecf0f1bd;
+        width: 50%;
+        height: 200%;
+        margin-right: 20px;
+        margin-top: 50px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 1.9em;
+    }
+
+      form {
+        margin-bottom: 20px;
+      }
+      label {
+        display: inline-block;
+        width: 100px;
+      }
+      input {
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 5px 10px;
+      }
+      #nav { 
+      background-color: #6ba1d7d2; /* A darker blue for better contrast */
+      color: #fff; /* White text for high contrast */
+      padding: 15px 30px;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      justify-content: center;
+        /*text-align: top;*/
+      }
+      .page-header h1 {
+        font-size: 3em; /* Make the title larger */
+        margin: 0;
+        align-self: center; /* Center the title vertically */
+        text-align: center; /* Center the title horizontally */
+        padding: 50px;
+        justify-content: center;
+        
+      }
+      .bmi-form {
+        max-width: 300px;
+        margin: auto;
+      }
+      .bmi-info {
+        flex: 1; /* Allows this section to grow and take up available space */
+        padding-right: 20px; 
+        }
+        .bmi-frm {
+        flex-shrink: 0; /* Prevents the form from shrinking */
+        width: 300px; /* Set a fixed width for the form for a consistent look */
+    /* You can add more styling here for a professional box look */
+        background-color: #f8f8f8db;
+        padding: 20px;
+        font-size: larger;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+      #footer {
+        background-color: #0d7e97;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        color: white;
+      }
+      #sidebar {
+        background-color: #4e7ce7d6;
+        height: 60vh;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 15px;
+        width: 30%;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        font-size: 15px;
+        color: black;
+      }
+          .bmi-flyer {
+          background: linear-gradient(135deg, #eef2ffc3, #f5faffc6);
+          padding: 28px;
+          border-radius: 20px;
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+          max-width: 450px; /* made it bigger */
+          margin: auto;
+          font-family: "Segoe UI", sans-serif;
+          text-align: center;
+        }
+
+        .bmi-flyer h2 {
+          color: #1e3a8a;
+          font-size: 1.8rem; /* bigger heading */
+          font-weight: 700;
+          margin-bottom: 12px;
+        }
+
+        .bmi-flyer .notice {
+          background: #dbeafec8;
+          color: #1e40af;
+          padding: 10px 14px;
+          border-radius: 10px;
+          margin-bottom: 18px;
+          font-size: 1rem;
+          font-weight: 500;
+          border: 1px solid #93c5fd;
+        }
+
+        .bmi-flyer table {
+          width: 100%;
+          border-collapse: collapse;
+          border-radius: 14px;
+          overflow: hidden;
+          font-size: 1rem; /* larger text */
+        }
+
+        .bmi-flyer thead {
+          background: #4f46e5;
+          color: white;
+          font-size: 1rem;
+        }
+
+        .bmi-flyer th,
+        .bmi-flyer td {
+          padding: 14px 16px;
+          text-align: left;
+        }
+
+        .bmi-flyer tbody tr:nth-child(even) {
+          background: #f9fafb;
+        }
+
+        .bmi-flyer tbody tr:hover {
+          background: #eef2ff;
+          transition: 0.3s;
+        }
+
+        /* Category Colors */
+        .underweight td:last-child { color: #d97706; font-weight: 600; }
+        .healthy td:last-child { color: #059669; font-weight: 600; }
+        .overweight td:last-child { color: #ea580c; font-weight: 600; }
+        .obesity td:last-child { color: #dc2626; font-weight: 600; }
+        .class1 td:last-child { color: #ef4444; font-weight: 600; }
+        .class2 td:last-child { color: #b91c1c; font-weight: 600; }
+        .class3 td:last-child { color: #7f1d1d; font-weight: 700; }
+
+        .note {
+          margin-top: 18px;
+          font-size: 0.85rem;
+          color: #374151;
+          line-height: 1.4;
+        }
+    </style>
+  </head>
+  <body>
+    <header  class="page-header">
+      <h1>Body Mass Index Calculator</h1>
+    </header>
+    <nav id="nav" >
+        <a href="index.html">HOME</a>  |
+        <a href="https://join.upsavirtual.site/">UPSA LMS</a> |
+        <a href="aboutus.html">ABOUT US</a>      
+    </nav>
+<article>
+    <section class="bmi-flyer">
+        <h2>📊 BMI Categories Chart</h2>
+  
+        <p class="notice">
+          👉 Please use the <strong>BMI Calculator</strong> first.<br>
+          Then check this chart to understand your result.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>BMI Range</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="underweight">
+              <td>Less than 18.5</td>
+              <td>Underweight</td>
+            </tr>
+            <tr class="healthy">
+              <td>18.5 – &lt;25</td>
+              <td>Healthy Weight</td>
+            </tr>
+            <tr class="overweight">
+              <td>25 – &lt;30</td>
+              <td>Overweight</td>
+            </tr>
+            <tr class="obesity">
+              <td>30 or greater</td>
+              <td>Obesity</td>
+            </tr>
+            <tr class="class1">
+              <td>30 – &lt;35</td>
+              <td>Class 1 Obesity</td>
+            </tr>
+            <tr class="class2">
+              <td>35 – &lt;40</td>
+              <td>Class 2 Obesity</td>
+            </tr>
+            <tr class="class3">
+              <td>40 or greater</td>
+              <td>Class 3 Obesity (Severe)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="note">
+          <b>BMI is a screening tool, not a diagnosis.  
+          Consult a health professional for personalized advice.</b>
+        </p>
+      </section>
+      <aside id="sidebar">
+        <div class="bmi-frm">
+        <form id="bmiForm" class="bmi-form">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" required />
+        <br /><br />
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height" required />
+        <br /><br />
+        <button type="submit">Calculate BMI</button>
+        <p id="result">The Answer will be shown here!</p>
+        </div>
+    </form>
+    
+    </aside>
+
+    <script>
+      document
+        .getElementById("bmiForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const weight = parseFloat(document.getElementById("weight").value);
+          const height =
+            parseFloat(document.getElementById("height").value) / 100; // convert cm to meters
+          const bmi = weight / (height * height);
+          document.getElementById(
+            "result"
+          ).innerText = `Your BMI is ${bmi.toFixed(2)}`;
+        });
+    </script>
+    </article>
+    <footer id="footer">
+      <p>&copy; 2025 Body Mass Index Calculator. All rights reserved. Designed by Samuel Otoo(Major Otoo)</p>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | My Health My Life</title>
+    <style>
+        body {
+            background-image: url(pic/loss.jpg);
+            background-size: cover;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .navbar {
+        background-color: #6ba1d7d2; /* A darker blue for better contrast */
+        color: #fff; /* White text for high contrast */
+        padding: 15px 30px;
+        text-align: center;
+        font-size: 1.5em;
+        }
+        .logo {
+          font-weight: bold;
+          font-size: 1.1em;
+          color: #1e40af;
+          text-decoration: none;
+        }
+        .nav-link{
+           font-weight: bold;
+          font-size: 1.1em;
+          color: #1e40af;
+          text-decoration: none;
+        }
+         nav {
+      
+        color: white;
+        height: 50%;
+        margin: 10px;
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      cursor: pointer;
+    }
+    nav ul li:hover {
+      color: #c2e73c;
+    }
+
+      /* Hero Section */
+      .about-container {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .about-hero {
+        text-align: center;
+        padding: 60px 0;
+        background-color: #f8f8f8ca;
+        border-radius: 10px;
+        margin-bottom: 40px;
+      }
+
+      .about-hero h1 {
+        font-size: 3.5rem;
+        color: #004d99;
+        margin-bottom: 20px;
+      }
+
+      .about-hero p {
+        font-size: 1.6rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .philosophy-section{
+        margin-bottom: 50px;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .philosophy-content {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+        padding: 60px 0;
+        background-color: #f8f8f8ca;
+        border-radius: 10px;
+        margin-bottom: 40px;
+      }
+
+      .philosophy-content p {
+        flex: 1;
+        font-size: 1.6rem;
+        line-height: 1.8;
+         display: flex;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+        padding: 100px 0;
+        background-color: #f8f8f8ca;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        
+      }
+      /* General Section Styling */
+      .story-section,
+      .philosophy-section,
+      .team-section {
+        margin-bottom: 50px;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 2.8rem;
+        color: #004d99;
+        text-align: center;
+        margin-bottom: 25px;
+        
+      }
+        h3 {
+        font-size: 2.8rem;
+        color: #004d99;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      /* Story Section Layout */
+      .story-content {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+        padding: 60px 0;
+        background-color: #f8f8f8e7;
+        border-radius: 10px;
+        margin-left: 20px;
+        margin-bottom: 40px;
+      }
+
+      .story-content p {
+        flex: 1;
+        font-size: 1.6rem;
+        line-height: 1.8;
+      }
+
+      .story-image {
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+        
+      /* Team Section Layout */
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        text-align: center;
+      }
+
+      .team-member {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .team-member:hover {
+        transform: translateY(-5px);
+      }
+
+      .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
+      .team-member h3 {
+        margin: 0;
+        color: #333;
+      }
+
+      .team-member p {
+        color: #666;
+        font-style: italic;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .story-content {
+          flex-direction: column;
+        }
+
+        .story-image {
+          width: 100%;
+        }
+
+        .about-hero h1 {
+          font-size: 2.5rem;
+        }
+      }
+      footer {
+      background-color: #0d7e97;
+      color: #fff;
+      padding: 12px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer-content  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        
+        <ul>
+        <li><a href="index.html" class="logo">Home</a></li> |
+          <li><a href="BMI.html" class="nav-link">Calculate BMI</a></li>
+         
+        </ul>
+      </nav>
+    </header>
+
+    <main class="about-container">
+      <section class="about-hero">
+        <h1>About My Health My Life</h1>
+        <p>
+          Welcome to My Health My Life, a platform born from a simple belief:
+          everyone deserves to live a vibrant, healthy life. We are more than
+          just a tool; we are your dedicated partner on the journey to
+          well-being. Our mission is to empower you with the knowledge and
+          resources to make informed health decisions, one step at a time.
+        </p>
+      </section>
+
+      <section class="story-section">
+        <h3>Our Story</h3>
+        <div class="story-content">
+          <img
+            src="Pic/group.jpg"
+            alt="Team discussing health"
+            class="story-image"
+          />
+          <p>
+            My Health My Life began as a small idea—to simplify complex health
+            metrics and make them accessible to everyone. We noticed that many
+            people felt overwhelmed by health information and were unsure where
+            to start. We set out to create a user-friendly space where the first
+            step toward wellness, like calculating your BMI, is as easy as a few
+            clicks. Our growth has been fueled by the success stories of
+            individuals who found their starting point with us, built momentum,
+            and transformed their lives.
+          </p>
+        </div>
+      </section>
+
+      <section class="philosophy-section">
+        <h2>Our Philosophy</h2>
+        <div class="philosophy-content">
+        <p>
+          
+          We believe that true health is holistic. It's not just about a number
+          on a scale or a BMI calculation; it's about physical vitality, mental
+          clarity, and emotional balance. Our philosophy is rooted in a
+          non-judgmental approach, encouraging progress over perfection. We are
+          committed to providing reliable, evidence-based information and
+          fostering a supportive community where you can find inspiration and
+          guidance.
+        </p>
+        </div>
+      </section>
+
+      <section class="team-section">
+        <h3>Meet the Team</h3>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="Pic/prof.webp" alt="Team member 1" />
+            <h3>Samuel Otoo</h3>
+            <p>Founder & CEO</p>
+            <p>Email: Majorotoo@gmail.com</p>
+          </div>
+        
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 My Health My Life. All rights reserved. Designed by Samuel Otoo (Major otoo)</p>
+        
+      </div>
+    </footer>
+  </body>
+</html>
