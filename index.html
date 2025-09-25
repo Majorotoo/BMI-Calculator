@@ -3,212 +3,181 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My health My life</title>
+    <title>My Health My Life</title>
+    <style>
+      body {
+        background-color: #f9fafb; /* Clean light background instead of food.png */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Header */
+      #page-header {
+        background-image: url(Pic/upsacampus.png); /* Keep header background image */
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+      }
+      #page-header h2 {
+        font-size: 2.5em;
+        margin: 0;
+        padding: 20px;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #1e3a8a; /* deep professional blue */
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .navbar ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      .navbar ul li a:hover {
+        color: #ffdd57; /* gold highlight */
+      }
+
+      /* Main content */
+      #main-article {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
+      }
+      section {
+        background-color: #ffffff;
+        flex: 2;
+        padding: 20px;
+        min-width: 280px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      aside {
+        background-color: #ffffff;
+        flex: 1;
+        padding: 20px;
+        min-width: 250px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      aside h4 {
+        margin-top: 0;
+        color: #1e3a8a;
+      }
+
+      /* CTA button */
+      .cta-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #ff6347;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      .cta-button:hover {
+        background-color: #ff4500;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #1e3a8a; /* deep professional blue */
+        color: white;
+        padding: 15px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        #page-header {
+          height: 200px;
+        }
+        #page-header h2 {
+          font-size: 1.8em;
+          padding: 10px;
+        }
+        #main-article {
+          flex-direction: column;
+        }
+        section,
+        aside {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
-  <style>
-    body {
-      background-image: url(Pic/food.png);
-      background-size: cover;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: center center;
-      line-height: 1.6;
-      color: #333;
-      font-family: Arial, sans-serif;
-      margin: 20px;
-
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      margin-bottom: 20px;
-    }
-    #page-header {
-      background-image: url(Pic/upsacampus.png);
-      background-size: cover;
-      height: 300px;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      color: white;
-      display: flex;
-      background-position: center center;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
-      margin-bottom: 20px; /* Add some space below the header */
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .navbar {
-      background-color: #6ba1d7d2; /* A darker blue for better contrast */
-      color: #fff; /* White text for high contrast */
-      padding: 15px 30px;
-      color: white;
-      text-align: center;
-      font-size: 1.5em;
-    }
-    .logo {
-      font-weight: bold;
-      font-size: 1em;
-      color: #1e40af;
-    }
-    .nav-link {
-      font-weight: bold;
-      font-size: 1em;
-      color: #1e40af;
-    }
-
-    nav {
-      color: white;
-      height: 50%;
-      margin: 10px;
-      display: flex;
-      padding: 0;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2em;
-      text-decoration: none;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li {
-      cursor: pointer;
-    }
-    nav ul li:hover {
-      text-decoration: none;
-    }
-
-    #main-article {
-      height: 60%;
-      display: flex;
-      flex-direction: row;
-      padding: 20px;
-    }
-    #page-header h2 {
-      font-size: 3em; /* Make the title larger */
-      margin: 0;
-      align-self: center; /* Center the title vertically */
-      text-align: center; /* Center the title horizontally */
-      padding: 50px;
-      align-content: center;
-    }
-    section {
-      background-color: #f5f7f5d7;
-      width: 70%;
-      height: 100%;
-      padding: 13px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      font-size: 1.5em;
-      line-height: 1.6;
-    }
-    #aside {
-      background-color: #6ba1d7d2;
-      width: 30%;
-      height: 100%;
-      margin-right: 17px;
-      padding: 35px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      font-size: 1.4em;
-      line-height: 1.6;
-    }
-    footer {
-      background-color: #0d7e97;
-      color: #fff;
-      padding: 13px;
-      text-align: center;
-      justify-content: center;
-      margin-top: 40px;
-    }
-
-    #page-footer p {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .cta-button {
-      display: inline-block;
-      padding: 15px 30px;
-      background-color: #ff6347; /* A bright, attention-grabbing color */
-      color: #fff;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 18px;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #ff4500;
-    }
-    .button-nav {
-      display: inline-block;
-      padding: 15px 30px;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 18px;
-    }
-  </style>
   <body>
     <header id="page-header">
-      <h2 align="center">Welcome to My health My life</h2>
+      <h2>Welcome to My Health My Life</h2>
     </header>
+
     <nav class="navbar">
       <ul>
-        <li>
-          <a href="https://join.upsavirtual.site/" class="logo">UPSA LMS</a> |
-        </li>
-        <li><a href="aboutus.html" class="nav-link">ABOUT US</a></li>
+        <li><a href="https://join.upsavirtual.site/">UPSA LMS</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
       </ul>
     </nav>
+
     <article id="main-article">
       <section>
         <p align="center"><b>Welcome to our platform!</b></p>
-        <br />We're thrilled to have you here. This is a space dedicated to
-        helping you better understand your body and embark on a journey towards
-        a healthier you. Our goal is to provide you with simple, yet effective
-        tools to get started, beginning with a quick and easy BMI calculation.
-        Let's take the first step together on the path to well-being.<br /><br />
-        Your body is your most valuable asset, and a great health journey starts
-        with knowledge. Our platform is designed to demystify health metrics and
-        provide you with actionable insights without overwhelming you with
-        jargon. The BMI calculation is not just a number; it's a foundational
-        piece of data that can empower you to make informed decisions about your
-        diet and fitness goals. We believe in progress, not perfection. Whether
-        you're a seasoned health enthusiast or just beginning to think about
-        your wellness, you'll find resources here to guide and inspire you. We
-        are committed to supporting you every step of the way as you build a
-        life full of vitality and confidence. We invite you to explore, learn,
-        and grow with us. Your journey to a healthier you starts now!
-        <br /><br />
-        <a href="BMI.html" class="cta-button primary-cta">Start Your Journey</a>
+        <p>
+          We're thrilled to have you here. This is a space dedicated to helping
+          you better understand your body and embark on a journey towards a
+          healthier you...
+        </p>
+        <a href="BMI.html" class="cta-button">Start Your Journey</a>
       </section>
-      <aside id="aside">
+
+      <aside>
         <h4>News Alert | September 2025</h4>
         <img
           src="Pic/fitness.jpg"
           alt="health fitness"
-          style="width: 100%; height: auto; margin-bottom: 15px"
+          style="
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+          "
         />
-        <br />
-        Ready to take control of your health? Let's start with a simple
-        calculation. Your BMI is a great starting point to assess your overall
-        health and well-being. It helps us understand where you stand and what
-        steps you can take to move forward. Get ready to begin your journey to a
-        healthier you!
+        <p>
+          Ready to take control of your health? Let's start with a simple
+          calculation. Your BMI is a great starting point to assess your overall
+          well-being.
+        </p>
       </aside>
     </article>
-    <footer id="page-footer">
+
+    <footer>
       <p>
         &copy; 2025 Body Mass Index Calculator. All rights reserved. Designed by
-        Samuel Otoo(Major Otoo)
+        Samuel Otoo (Major Otoo)
       </p>
     </footer>
   </body>
